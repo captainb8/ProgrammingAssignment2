@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {
         return(inverse)                     #if not null, return it, avoiding the computation
     }
     data <- x$get()
-    inverse <- solve(data, ...)     #compute the inverse
+    inverse <- solve(data)          #compute the inverse
     x$setinverse(inverse)           #cache the inverse by passing it to the makeCacheMatrix funciton
     inverse
 }
